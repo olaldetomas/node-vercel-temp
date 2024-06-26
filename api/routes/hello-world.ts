@@ -6,6 +6,5 @@ export async function helloWorld(
   res: Response,
   next: NextFunction
 ): Promise<void> {
-  return next(new ApiError('This is an error', 500));
   res.send('Hello World');
 }
