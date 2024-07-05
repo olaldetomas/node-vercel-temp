@@ -1,10 +1,10 @@
+import '../config';
 import { drizzle } from 'drizzle-orm/node-postgres';
 import { Pool } from 'pg';
 import { sql } from '@vercel/postgres';
-import { config } from '../config';
 
 export const db =
-  config.env === 'production'
+  process.env.NODE_ENV === 'production'
     ? drizzle(sql)
     : drizzle(
         new Pool({
