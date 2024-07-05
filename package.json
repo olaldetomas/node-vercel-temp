@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "vercel dev",
-    "start:local": "nodemon src/dev-server.ts",
+    "start:local": "nodemon api/dev-server.ts",
     "generate": "drizzle-kit generate --config ./drizzle.config.ts",
     "migrate": "drizzle-kit migrate"
   },
