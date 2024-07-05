@@ -6,4 +6,3 @@ export const routes = Router();
 
 routes.get('/users', getUser);
 routes.post('/users', createUser);
-routes.get('/health', (req, res) => res.send('ok'));
