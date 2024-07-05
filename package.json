@@ -4,7 +4,10 @@
   "description": "Vercel NodeJS template",
   "main": "index.js",
   "scripts": {
-    "start": "vercel dev"
+    "start": "vercel dev",
+    "start:local": "nodemon src/dev-server.ts",
+    "generate": "drizzle-kit generate --config ./drizzle.config.ts",
+    "migrate": "drizzle-kit migrate"
   },
   "repository": {
     "type": "git",
@@ -17,10 +20,15 @@
   },
   "homepage": "https://github.com/olaldetomas/node-vercel-temp#readme",
   "dependencies": {
+    "@types/pg": "^8.11.6",
+    "@vercel/postgres": "^0.9.0",
     "body-parser": "^1.19.0",
     "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.31.2",
     "express": "^4.17.1",
     "http-status-codes": "^2.3.0",
+    "pg": "^8.12.0",
+    "postgres": "^3.4.4",
     "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
@@ -28,6 +36,7 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.2",
     "@types/supertest": "^6.0.2",
+    "drizzle-kit": "^0.22.8",
     "eslint": "^9.4.0",
     "jest": "^29.7.0",
     "nodemon": "^3.1.3",

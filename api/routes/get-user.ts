@@ -1,10 +1,9 @@
 import { NextFunction, Request, Response } from 'express';
-import { ApiError } from '../middleware/apiError';
 
-export async function helloWorld(
+export async function getUser(
   req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> {
-  res.send('Hello World');
+  res.send('create user');
 }
